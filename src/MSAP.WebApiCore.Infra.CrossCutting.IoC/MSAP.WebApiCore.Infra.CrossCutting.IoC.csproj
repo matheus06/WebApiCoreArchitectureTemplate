@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MSAP.WebApiCore.Application\MSAP.WebApiCore.Application.csproj" />
+    <ProjectReference Include="..\MSAP.WebApiCore.Domain\MSAP.WebApiCore.Domain.csproj" />
+    <ProjectReference Include="..\MSAP.WebApiCore.Infra.Data\MSAP.WebApiCore.Infra.Data.csproj" />
+  </ItemGroup>
+
+
+
+</Project>
