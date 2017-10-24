@@ -47,7 +47,7 @@ namespace MSAP.WebApiCore.Domain.Services
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            GC.SuppressFinalize(this);
         }
     }
 }

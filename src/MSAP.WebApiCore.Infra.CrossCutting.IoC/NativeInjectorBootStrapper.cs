@@ -25,6 +25,7 @@ namespace MSAP.WebApiCore.Infra.CrossCutting.IoC
 
             //Infra-Data
             services.AddScoped<ITodoRepository, TodoRepository>();
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<WebApiContext>();
         }
     }
