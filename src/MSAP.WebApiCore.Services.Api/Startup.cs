@@ -35,9 +35,21 @@ namespace MSAP.WebApiCore.Services.Api
             AutoMapperConfiguration.RegisterMappings();
             NativeInjectorBootStrapper.RegisterServices(services);
 
+            services.AddSwaggerGen(options =>
+            {
+                options.DescribeAllEnumsAsStrings();
+                options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
+                {
+                    Title = "WebApiCore - Todo HTTP API",
+                    Version = "v1",
+                    Description = "HTTP API",
+                    TermsOfService = "Terms Of Service"
+                });
+            });
+
             // Registrar IoC
             //RegisterServices(services);
-            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +61,11 @@ namespace MSAP.WebApiCore.Services.Api
             }
 
             app.UseMvc();
+            app.UseSwagger()
+                .UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                });
         }
 
         private static void RegisterServices(IServiceCollection services)

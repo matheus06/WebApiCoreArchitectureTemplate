@@ -21,11 +21,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSAP.WebApiCore.Domain", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSAP.WebApiCore.Application", "src\MSAP.WebApiCore.Application\MSAP.WebApiCore.Application.csproj", "{0ECD1CA4-3C37-4652-ACC8-FDDDEF685256}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAP.WebApiCore.Services.Api", "src\MSAP.WebApiCore.Services.Api\MSAP.WebApiCore.Services.Api.csproj", "{013B9285-FC32-485A-BD0B-7FB81B91197D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSAP.WebApiCore.Services.Api", "src\MSAP.WebApiCore.Services.Api\MSAP.WebApiCore.Services.Api.csproj", "{013B9285-FC32-485A-BD0B-7FB81B91197D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2-CrossCutting", "5.2-CrossCutting", "{5E67847F-0C72-4D85-964F-9AF6ADCE72BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAP.WebApiCore.Infra.CrossCutting.IoC", "src\MSAP.WebApiCore.Infra.CrossCutting.IoC\MSAP.WebApiCore.Infra.CrossCutting.IoC.csproj", "{295D4532-3533-4187-AE02-0AD29AA789C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSAP.WebApiCore.Infra.CrossCutting.IoC", "src\MSAP.WebApiCore.Infra.CrossCutting.IoC\MSAP.WebApiCore.Infra.CrossCutting.IoC.csproj", "{295D4532-3533-4187-AE02-0AD29AA789C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAP.WebApiCore.Infra.CrossCutting.EventBus", "src\MSAP.WebApiCore.Infra.CrossCutting.EventBus\MSAP.WebApiCore.Infra.CrossCutting.EventBus.csproj", "{41F5CD1A-8701-4EA4-A8B9-5842DBE07552}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ", "src\EventBusRabbitMQ\MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ.csproj", "{495C9055-07DA-4AB9-A425-7B51419E6545}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,14 @@ Global
 		{295D4532-3533-4187-AE02-0AD29AA789C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{295D4532-3533-4187-AE02-0AD29AA789C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{295D4532-3533-4187-AE02-0AD29AA789C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41F5CD1A-8701-4EA4-A8B9-5842DBE07552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41F5CD1A-8701-4EA4-A8B9-5842DBE07552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41F5CD1A-8701-4EA4-A8B9-5842DBE07552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41F5CD1A-8701-4EA4-A8B9-5842DBE07552}.Release|Any CPU.Build.0 = Release|Any CPU
+		{495C9055-07DA-4AB9-A425-7B51419E6545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{495C9055-07DA-4AB9-A425-7B51419E6545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{495C9055-07DA-4AB9-A425-7B51419E6545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{495C9055-07DA-4AB9-A425-7B51419E6545}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +77,8 @@ Global
 		{013B9285-FC32-485A-BD0B-7FB81B91197D} = {DC95AF95-E9B2-4CAA-B397-F24D61A46E38}
 		{5E67847F-0C72-4D85-964F-9AF6ADCE72BB} = {6B722CBA-EF86-48CF-B39C-0EA927AF7AB1}
 		{295D4532-3533-4187-AE02-0AD29AA789C5} = {5E67847F-0C72-4D85-964F-9AF6ADCE72BB}
+		{41F5CD1A-8701-4EA4-A8B9-5842DBE07552} = {5E67847F-0C72-4D85-964F-9AF6ADCE72BB}
+		{495C9055-07DA-4AB9-A425-7B51419E6545} = {5E67847F-0C72-4D85-964F-9AF6ADCE72BB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5ED4F138-7ACE-49BC-B232-DFD54A66F2A4}

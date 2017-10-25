@@ -21,7 +21,7 @@ namespace MSAP.WebApiCore.Services.Api.Controllers
             _todoAppService = todoAppService;
         }
 
-        // GET: api/Clientes
+        // GET: api/Todo
         [HttpGet]
         public IEnumerable<TodoViewModel> ObterTodos()
         {
