@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSAP.WebApiCore.Infra.Cross
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAP.WebApiCore.Infra.CrossCutting.EventBus", "src\MSAP.WebApiCore.Infra.CrossCutting.EventBus\MSAP.WebApiCore.Infra.CrossCutting.EventBus.csproj", "{41F5CD1A-8701-4EA4-A8B9-5842DBE07552}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ", "src\EventBusRabbitMQ\MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ.csproj", "{495C9055-07DA-4AB9-A425-7B51419E6545}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAP.WebApiCore.Services.SubscribeApi", "src\MSAP.WebApiCore.Services.SubscribeApi\MSAP.WebApiCore.Services.SubscribeApi.csproj", "{889D2919-64E5-4C19-BF65-400FCC328FB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ", "src\MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ\MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ.csproj", "{5711247B-545B-4ACB-9BDC-B9497978530E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,10 +63,14 @@ Global
 		{41F5CD1A-8701-4EA4-A8B9-5842DBE07552}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41F5CD1A-8701-4EA4-A8B9-5842DBE07552}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41F5CD1A-8701-4EA4-A8B9-5842DBE07552}.Release|Any CPU.Build.0 = Release|Any CPU
-		{495C9055-07DA-4AB9-A425-7B51419E6545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{495C9055-07DA-4AB9-A425-7B51419E6545}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{495C9055-07DA-4AB9-A425-7B51419E6545}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{495C9055-07DA-4AB9-A425-7B51419E6545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{889D2919-64E5-4C19-BF65-400FCC328FB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{889D2919-64E5-4C19-BF65-400FCC328FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{889D2919-64E5-4C19-BF65-400FCC328FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{889D2919-64E5-4C19-BF65-400FCC328FB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5711247B-545B-4ACB-9BDC-B9497978530E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5711247B-545B-4ACB-9BDC-B9497978530E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5711247B-545B-4ACB-9BDC-B9497978530E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5711247B-545B-4ACB-9BDC-B9497978530E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,7 +84,8 @@ Global
 		{5E67847F-0C72-4D85-964F-9AF6ADCE72BB} = {6B722CBA-EF86-48CF-B39C-0EA927AF7AB1}
 		{295D4532-3533-4187-AE02-0AD29AA789C5} = {5E67847F-0C72-4D85-964F-9AF6ADCE72BB}
 		{41F5CD1A-8701-4EA4-A8B9-5842DBE07552} = {5E67847F-0C72-4D85-964F-9AF6ADCE72BB}
-		{495C9055-07DA-4AB9-A425-7B51419E6545} = {5E67847F-0C72-4D85-964F-9AF6ADCE72BB}
+		{889D2919-64E5-4C19-BF65-400FCC328FB8} = {DC95AF95-E9B2-4CAA-B397-F24D61A46E38}
+		{5711247B-545B-4ACB-9BDC-B9497978530E} = {5E67847F-0C72-4D85-964F-9AF6ADCE72BB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5ED4F138-7ACE-49BC-B232-DFD54A66F2A4}

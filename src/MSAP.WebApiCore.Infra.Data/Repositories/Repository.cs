@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using MSAP.WebApiCore.Domain.Interfaces.Repositories;
 using MSAP.WebApiCore.Infra.Data.Context;
@@ -18,10 +19,15 @@ namespace MSAP.WebApiCore.Infra.Data.Repositories
             Db = context;
             DbSet = Db.Set<TEntity>();
         }
-        
+
         public virtual void Add(TEntity obj)
         {
-            DbSet.Add(obj);
+             DbSet.Add(obj);
+        }
+
+        public virtual Task AddAsync(TEntity obj)
+        {
+           return  DbSet.AddAsync(obj);
         }
 
         public virtual void Update(TEntity obj)

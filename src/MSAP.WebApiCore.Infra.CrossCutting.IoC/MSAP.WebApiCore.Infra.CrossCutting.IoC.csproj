@@ -11,6 +11,8 @@
   <ItemGroup>
     <ProjectReference Include="..\MSAP.WebApiCore.Application\MSAP.WebApiCore.Application.csproj" />
     <ProjectReference Include="..\MSAP.WebApiCore.Domain\MSAP.WebApiCore.Domain.csproj" />
+    <ProjectReference Include="..\MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ\MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ.csproj" />
+    <ProjectReference Include="..\MSAP.WebApiCore.Infra.CrossCutting.EventBus\MSAP.WebApiCore.Infra.CrossCutting.EventBus.csproj" />
     <ProjectReference Include="..\MSAP.WebApiCore.Infra.Data\MSAP.WebApiCore.Infra.Data.csproj" />
   </ItemGroup>
 

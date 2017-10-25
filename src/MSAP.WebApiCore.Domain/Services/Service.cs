@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 using MSAP.WebApiCore.Domain.Interfaces.Repositories;
 using MSAP.WebApiCore.Domain.Interfaces.Services;
 
@@ -15,9 +16,13 @@ namespace MSAP.WebApiCore.Domain.Services
             this._repository = repository;
         }
 
+        public Task AddAsync(TEntity obj)
+        {
+           return _repository.AddAsync(obj);
+        }
         public void Add(TEntity obj)
         {
-            _repository.Add(obj);
+             _repository.Add(obj);
         }
 
         public TEntity GetById(int id)

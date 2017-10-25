@@ -4,9 +4,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MSAP.WebApiCore.Application.AutoMapper;
+using MSAP.WebApiCore.Infra.CrossCutting.EventBus.Interfaces;
 using MSAP.WebApiCore.Infra.CrossCutting.IoC;
+using MSAP.WebApiCore.Services.SubscribeApi.IntegrationEvents.EventHandling;
+using MSAP.WebApiCore.Services.SubscribeApi.IntegrationEvents.Events;
 
-namespace MSAP.WebApiCore.Services.Api
+namespace MSAP.WebApiCore.Services.SubscribeApi
 {
     public class Startup
     {
@@ -28,19 +31,9 @@ namespace MSAP.WebApiCore.Services.Api
             AutoMapperConfiguration.RegisterMappings();
             NativeInjectorBootStrapper.RegisterServices(services);
 
-            services.AddSwaggerGen(options =>
-            {
-                options.DescribeAllEnumsAsStrings();
-                options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
-                {
-                    Title = "WebApiCore - Todo HTTP API",
-                    Version = "v1",
-                    Description = "HTTP API",
-                    TermsOfService = "Terms Of Service"
-                });
-            });
-        }
+            InjectEvents(services);
 
+        }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
@@ -50,11 +43,20 @@ namespace MSAP.WebApiCore.Services.Api
             }
 
             app.UseMvc();
-            app.UseSwagger()
-                .UseSwaggerUI(c =>
-                {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-                });
+
+            SubscribeEvents(app);
+        }
+
+        private static void InjectEvents(IServiceCollection services)
+        {
+            services.AddTransient<IIntegrationEventHandler<TodoModelChangedIntegrationEvent>, TodoModelChangedIntegrationEventHandler>();
+        }
+
+        private static void SubscribeEvents(IApplicationBuilder app)
+        {
+            var todoModelHandler = app.ApplicationServices.GetService<IIntegrationEventHandler<TodoModelChangedIntegrationEvent>>();
+            var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
+            eventBus.Subscribe<TodoModelChangedIntegrationEvent>(todoModelHandler);
         }
     }
 }

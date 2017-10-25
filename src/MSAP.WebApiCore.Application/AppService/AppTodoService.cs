@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using AutoMapper;
 using MSAP.WebApiCore.Application.Interfaces;
 using MSAP.WebApiCore.Application.ViewModels;
@@ -20,10 +21,10 @@ namespace MSAP.WebApiCore.Application.AppService
             _todoRepository = todoRepository;
         }
 
-        public void Adicionar(TodoViewModel equipeViewModel)
+        public Task Adicionar(TodoViewModel equipeViewModel)
         {
             var servidor = _mapper.Map<TodoViewModel, Todo>(equipeViewModel);
-            _todoService.Add(servidor);
+           return _todoService.AddAsync(servidor);
         }
 
         public TodoViewModel ObterPorId(int id)
