@@ -6,7 +6,7 @@ COPY /src/MSAP.WebApiCore.Services.Api/*.csproj ./
 RUN dotnet restore
 
 # Copy everything else and build
-COPY . ./
+COPY /src/MSAP.WebApiCore.Services.Api/ ./
 RUN dotnet publish -c Release -o out
 
 # Build runtime image
