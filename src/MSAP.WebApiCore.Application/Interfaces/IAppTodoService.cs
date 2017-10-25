@@ -7,7 +7,8 @@ namespace MSAP.WebApiCore.Application.Interfaces
 {
     public interface IAppTodoService : IDisposable
     {
-        Task Adicionar(TodoViewModel todoViewModel);
+        void Adicionar(TodoViewModel todoViewModel);
+        Task AdicionarAsync(TodoViewModel todoViewModel);
         TodoViewModel ObterPorId(int id);
         IEnumerable<TodoViewModel> ObterTodos();
         void Atualizar(TodoViewModel todoViewModel);

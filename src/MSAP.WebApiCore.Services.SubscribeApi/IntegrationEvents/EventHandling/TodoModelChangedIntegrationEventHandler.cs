@@ -22,7 +22,7 @@ namespace MSAP.WebApiCore.Services.SubscribeApi.IntegrationEvents.EventHandling
             todoView.Descricao = "Evento Recebido";
             todoView.Serial = "Evento New Value" + @event.NewValue;
             todoView.Host = "Evento Old Value" + @event.OldValue;
-           return _todoAppService.Adicionar(todoView);
+           return _todoAppService.AdicionarAsync(todoView);
         }
     }
 }

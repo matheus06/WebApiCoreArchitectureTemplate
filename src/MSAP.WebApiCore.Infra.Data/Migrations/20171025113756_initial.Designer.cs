@@ -11,7 +11,7 @@ using System;
 namespace MSAP.WebApiCore.Infra.Data.Migrations
 {
     [DbContext(typeof(WebApiContext))]
-    [Migration("20171024223910_initial")]
+    [Migration("20171025113756_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

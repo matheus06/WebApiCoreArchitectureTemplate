@@ -4,13 +4,13 @@ namespace MSAP.WebApiCore.Services.Api.IntegrationEvents.Events
 {
     public class TodoModelChangedIntegrationEvent : IntegrationEvent
     {
-        public int ModelId { get; private set; }
+        public string ModelId { get; private set; }
 
-        public decimal NewValue { get; private set; }
+        public string NewValue { get; private set; }
 
-        public decimal OldValue { get; private set; }
+        public string OldValue { get; private set; }
 
-        public TodoModelChangedIntegrationEvent(int modelId, decimal newValue, decimal oldValue)
+        public TodoModelChangedIntegrationEvent(string modelId, string newValue, string oldValue)
         {
             ModelId = modelId;
             NewValue = newValue;

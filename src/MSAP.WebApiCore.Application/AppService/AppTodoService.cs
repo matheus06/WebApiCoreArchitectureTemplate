@@ -21,10 +21,16 @@ namespace MSAP.WebApiCore.Application.AppService
             _todoRepository = todoRepository;
         }
 
-        public Task Adicionar(TodoViewModel equipeViewModel)
+        public void Adicionar(TodoViewModel equipeViewModel)
         {
-            var servidor = _mapper.Map<TodoViewModel, Todo>(equipeViewModel);
-           return _todoService.AddAsync(servidor);
+            var todo = _mapper.Map<TodoViewModel, Todo>(equipeViewModel);
+             _todoService.Add(todo);
+        }
+
+        public Task AdicionarAsync(TodoViewModel equipeViewModel)
+        {
+            var todo = _mapper.Map<TodoViewModel, Todo>(equipeViewModel);
+           return _todoService.AddAsync(todo);
         }
 
         public TodoViewModel ObterPorId(int id)
@@ -37,10 +43,10 @@ namespace MSAP.WebApiCore.Application.AppService
             return _mapper.Map<IEnumerable<TodoViewModel>>(_todoRepository.GetAll());
         }
 
-        public void Atualizar(TodoViewModel equipeViewModel)
+        public void Atualizar(TodoViewModel todoViewModel)
         {
-            var equipe = _mapper.Map<TodoViewModel, Todo>(equipeViewModel);
-            _todoService.Update(equipe);
+            var todo = _mapper.Map<TodoViewModel, Todo>(todoViewModel);
+            _todoService.Update(todo);
         }
 
         public void Remover(int id)

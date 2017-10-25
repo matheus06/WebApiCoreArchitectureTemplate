@@ -23,11 +23,13 @@ namespace MSAP.WebApiCore.Infra.Data.Repositories
         public virtual void Add(TEntity obj)
         {
              DbSet.Add(obj);
+             SaveChanges();
         }
 
         public virtual Task AddAsync(TEntity obj)
         {
-           return  DbSet.AddAsync(obj);
+            DbSet.AddAsync(obj);
+            return SaveChangesAsync();
         }
 
         public virtual void Update(TEntity obj)
@@ -59,6 +61,11 @@ namespace MSAP.WebApiCore.Infra.Data.Repositories
         public int SaveChanges()
         {
             return Db.SaveChanges();
+        }
+
+        public Task<int> SaveChangesAsync()
+        {
+            return Db.SaveChangesAsync();
         }
 
         public void Dispose()
