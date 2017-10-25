@@ -27,11 +27,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2-CrossCutting", "5.2-Cro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSAP.WebApiCore.Infra.CrossCutting.IoC", "src\MSAP.WebApiCore.Infra.CrossCutting.IoC\MSAP.WebApiCore.Infra.CrossCutting.IoC.csproj", "{295D4532-3533-4187-AE02-0AD29AA789C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAP.WebApiCore.Infra.CrossCutting.EventBus", "src\MSAP.WebApiCore.Infra.CrossCutting.EventBus\MSAP.WebApiCore.Infra.CrossCutting.EventBus.csproj", "{41F5CD1A-8701-4EA4-A8B9-5842DBE07552}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSAP.WebApiCore.Infra.CrossCutting.EventBus", "src\MSAP.WebApiCore.Infra.CrossCutting.EventBus\MSAP.WebApiCore.Infra.CrossCutting.EventBus.csproj", "{41F5CD1A-8701-4EA4-A8B9-5842DBE07552}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAP.WebApiCore.Services.SubscribeApi", "src\MSAP.WebApiCore.Services.SubscribeApi\MSAP.WebApiCore.Services.SubscribeApi.csproj", "{889D2919-64E5-4C19-BF65-400FCC328FB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSAP.WebApiCore.Services.SubscribeApi", "src\MSAP.WebApiCore.Services.SubscribeApi\MSAP.WebApiCore.Services.SubscribeApi.csproj", "{889D2919-64E5-4C19-BF65-400FCC328FB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ", "src\MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ\MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ.csproj", "{5711247B-545B-4ACB-9BDC-B9497978530E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ", "src\MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ\MSAP.WebApiCore.Infra.CrossCutting.EventBusRabbitMQ.csproj", "{5711247B-545B-4ACB-9BDC-B9497978530E}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F9A2D955-2129-4A74-BD4E-54F8AEADB52A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,10 @@ Global
 		{5711247B-545B-4ACB-9BDC-B9497978530E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5711247B-545B-4ACB-9BDC-B9497978530E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5711247B-545B-4ACB-9BDC-B9497978530E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9A2D955-2129-4A74-BD4E-54F8AEADB52A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9A2D955-2129-4A74-BD4E-54F8AEADB52A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9A2D955-2129-4A74-BD4E-54F8AEADB52A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9A2D955-2129-4A74-BD4E-54F8AEADB52A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

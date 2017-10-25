@@ -1,9 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
-using MSAP.WebApiCore.Application.Interfaces;
+﻿using MSAP.WebApiCore.Application.Interfaces;
 using MSAP.WebApiCore.Application.ViewModels;
 using MSAP.WebApiCore.Infra.CrossCutting.EventBus.Interfaces;
 using MSAP.WebApiCore.Services.SubscribeApi.IntegrationEvents.Events;
+using System.Threading.Tasks;
 
 namespace MSAP.WebApiCore.Services.SubscribeApi.IntegrationEvents.EventHandling
 {
